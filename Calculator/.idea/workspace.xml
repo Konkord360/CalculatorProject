@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5dc9a0c-0297-4bcc-9380-6dad2d6544ec" name="Default Changelist" comment="" />
+    <list default="true" id="d5dc9a0c-0297-4bcc-9380-6dad2d6544ec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/classes/LogicTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/classes/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/classes/CalculatorModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/CalculatorModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/classes/GUITests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/classes/GUITests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/classes/CalculatorModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/classes/CalculatorModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/classes/GUITests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/classes/GUITests.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,41 +46,48 @@
     <session id="689380366">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.7" value="2" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.7" value="4" />
+          <entry key="project.open.time.8" value="6" />
+          <entry key="project.open.time.9" value="5" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="11" />
-          <entry key="form" value="2" />
-          <entry key="java" value="49" />
-          <entry key="xml" value="2" />
+          <entry key="form" value="4" />
+          <entry key="java" value="64" />
+          <entry key="xml" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="11" />
-          <entry key="GUI_DESIGNER_FORM" value="2" />
-          <entry key="JAVA" value="49" />
-          <entry key="XML" value="2" />
+          <entry key="GUI_DESIGNER_FORM" value="4" />
+          <entry key="JAVA" value="64" />
+          <entry key="XML" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="29" />
-          <entry key="java" value="3322" />
-          <entry key="xml" value="3" />
+          <entry key="java" value="4960" />
+          <entry key="xml" value="97" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3322" />
+          <entry key="JAVA" value="4960" />
           <entry key="PLAIN_TEXT" value="29" />
-          <entry key="XML" value="3" />
+          <entry key="XML" value="97" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.checkout.local" value="2" />
+          <entry key="git.branch.create.new" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -80,8 +97,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/classes/GUITests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1479">
-              <caret line="87" column="57" lean-forward="true" selection-start-line="87" selection-start-column="57" selection-end-line="87" selection-end-column="57" />
+            <state relative-caret-position="425">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/classes/LogicTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,14 +121,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/GUI/CalculatorInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="89" column="19" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="19" />
+            <state relative-caret-position="833">
+              <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3932#3933#0" expanded="true" />
-                <element signature="e#3999#4000#0" expanded="true" />
-                <element signature="e#3792#3793#0" expanded="true" />
-                <element signature="e#3833#3834#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,13 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/classes/CalculatorController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="790">
-              <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1056#1057#0" expanded="true" />
-                <element signature="e#1109#1110#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -122,12 +142,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/classes/CalculatorModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="83">
+              <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
               <folding>
-                <element signature="e#228#229#0" expanded="true" />
-                <element signature="e#254#255#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -135,8 +163,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/classes/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="221">
+              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -147,15 +175,6 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/GUI/CalculatorInterface.form">
           <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -172,18 +191,27 @@
       <find>a2Button</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/GUI/CalcInterface.form" />
         <option value="$PROJECT_DIR$/src/main/java/GUI/CalcInterface.java" />
-        <option value="$PROJECT_DIR$/src/main/java/classes/App.java" />
         <option value="$PROJECT_DIR$/src/test/java/classes/AppTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/GUI/CalculatorInterface.java" />
-        <option value="$PROJECT_DIR$/src/main/java/classes/CalculatorModel.java" />
-        <option value="$PROJECT_DIR$/src/test/java/classes/GUITests.java" />
         <option value="$PROJECT_DIR$/src/main/java/classes/CalculatorController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/classes/GUITests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/classes/App.java" />
+        <option value="$PROJECT_DIR$/src/test/java/classes/LogicTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/classes/CalculatorModel.java" />
       </list>
     </option>
   </component>
@@ -211,11 +239,11 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="junit" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="SimpleCalculator" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="junit" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="SimpleCalculator" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
@@ -608,6 +636,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -692,7 +721,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="364" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551818455586" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552345143016" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
@@ -709,7 +738,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.LogicTests.checkIfCalculatorCanProperlySplitEquationIntoParts">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="classes.App" />
       <module name="Calculator" />
@@ -723,7 +752,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GUITests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LogicTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Calculator" />
       <extension name="coverage">
         <pattern>
@@ -732,12 +761,12 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="classes" />
-      <option name="MAIN_CLASS_NAME" value="classes.GUITests" />
+      <option name="MAIN_CLASS_NAME" value="classes.LogicTests" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GUITests.checkIfBackButtonClearsLastEntrance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LogicTests.checkIfCalculatorCanProperlyAddTwoNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Calculator" />
       <extension name="coverage">
         <pattern>
@@ -746,14 +775,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="classes" />
-      <option name="MAIN_CLASS_NAME" value="classes.GUITests" />
-      <option name="METHOD_NAME" value="checkIfBackButtonClearsLastEntrance" />
+      <option name="MAIN_CLASS_NAME" value="classes.LogicTests" />
+      <option name="METHOD_NAME" value="checkIfCalculatorCanProperlyAddTwoNumbers" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GUITests.checkIfCButtonClearsTextField" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LogicTests.checkIfCalculatorCanProperlyCalculateEquationWithAdditionAndSubtraction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Calculator" />
       <extension name="coverage">
         <pattern>
@@ -762,14 +791,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="classes" />
-      <option name="MAIN_CLASS_NAME" value="classes.GUITests" />
-      <option name="METHOD_NAME" value="checkIfCButtonClearsTextField" />
+      <option name="MAIN_CLASS_NAME" value="classes.LogicTests" />
+      <option name="METHOD_NAME" value="checkIfCalculatorCanProperlyCalculateEquationWithAdditionAndSubtraction" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GUITests.checkIfa0ButtonPuts0InEquationField" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LogicTests.checkIfCalculatorCanProperlySplitEquationIntoParts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Calculator" />
       <extension name="coverage">
         <pattern>
@@ -778,8 +807,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="classes" />
-      <option name="MAIN_CLASS_NAME" value="classes.GUITests" />
-      <option name="METHOD_NAME" value="checkIfa0ButtonPuts0InEquationField" />
+      <option name="MAIN_CLASS_NAME" value="classes.LogicTests" />
+      <option name="METHOD_NAME" value="checkIfCalculatorCanProperlySplitEquationIntoParts" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -787,18 +816,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.App" />
-      <item itemvalue="JUnit.GUITests" />
-      <item itemvalue="JUnit.GUITests.checkIfCButtonClearsTextField" />
-      <item itemvalue="JUnit.GUITests.checkIfBackButtonClearsLastEntrance" />
-      <item itemvalue="JUnit.GUITests.checkIfa0ButtonPuts0InEquationField" />
+      <item itemvalue="JUnit.LogicTests.checkIfCalculatorCanProperlyAddTwoNumbers" />
+      <item itemvalue="JUnit.LogicTests" />
+      <item itemvalue="JUnit.LogicTests.checkIfCalculatorCanProperlyCalculateEquationWithAdditionAndSubtraction" />
+      <item itemvalue="JUnit.LogicTests.checkIfCalculatorCanProperlySplitEquationIntoParts" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GUITests" />
+        <item itemvalue="JUnit.LogicTests.checkIfCalculatorCanProperlySplitEquationIntoParts" />
+        <item itemvalue="JUnit.LogicTests.checkIfCalculatorCanProperlyCalculateEquationWithAdditionAndSubtraction" />
+        <item itemvalue="JUnit.LogicTests" />
+        <item itemvalue="JUnit.LogicTests.checkIfCalculatorCanProperlyAddTwoNumbers" />
         <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.GUITests.checkIfa0ButtonPuts0InEquationField" />
-        <item itemvalue="JUnit.GUITests.checkIfBackButtonClearsLastEntrance" />
-        <item itemvalue="JUnit.GUITests.checkIfCButtonClearsTextField" />
       </list>
     </recent_temporary>
   </component>
@@ -816,50 +845,60 @@
       <workItem from="1551458864771" duration="2718000" />
       <workItem from="1551465313248" duration="5792000" />
       <workItem from="1551565231909" duration="2296000" />
-      <workItem from="1551810734464" duration="5120000" />
+      <workItem from="1551810734464" duration="6561000" />
+      <workItem from="1551824229029" duration="599000" />
+      <workItem from="1551902343458" duration="875000" />
+      <workItem from="1551911639437" duration="602000" />
+      <workItem from="1551995050222" duration="920000" />
+      <workItem from="1552068367614" duration="930000" />
+      <workItem from="1552166620102" duration="722000" />
+      <workItem from="1552209579706" duration="1193000" />
+      <workItem from="1552226916165" duration="605000" />
+      <workItem from="1552241398688" duration="1822000" />
+      <workItem from="1552258225929" duration="599000" />
+      <workItem from="1552333700785" duration="8265000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AppTest_checkIfBackButtonClearsLastEntrance - 2019.03.02 at 23h 51m 53s.xml">
-      <configuration name="AppTest.checkIfBackButtonClearsLastEntrance" configurationId="JUnit" />
+    <history-entry file="LogicTests_checkIfCalculatorCanProperlyCalculateEquationWithAdditionAndSubtraction - 2019.03.11 at 22h 39m 09s.xml">
+      <configuration name="LogicTests.checkIfCalculatorCanProperlyCalculateEquationWithAdditionAndSubtraction" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_checkIfBackButtonClearsLastEntrance - 2019.03.02 at 23h 52m 38s.xml">
-      <configuration name="AppTest.checkIfBackButtonClearsLastEntrance" configurationId="JUnit" />
+    <history-entry file="LogicTests_checkIfCalculatorCanProperlyCalculateEquationWithAdditionAndSubtraction - 2019.03.11 at 22h 40m 15s.xml">
+      <configuration name="LogicTests.checkIfCalculatorCanProperlyCalculateEquationWithAdditionAndSubtraction" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest - 2019.03.02 at 23h 59m 09s.xml">
-      <configuration name="AppTest" configurationId="JUnit" />
+    <history-entry file="LogicTests_checkIfCalculatorCanProperlyCalculateEquationWithAdditionAndSubtraction - 2019.03.11 at 22h 42m 38s.xml">
+      <configuration name="LogicTests.checkIfCalculatorCanProperlyCalculateEquationWithAdditionAndSubtraction" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest - 2019.03.05 at 20h 15m 18s.xml">
-      <configuration name="AppTest" configurationId="JUnit" />
+    <history-entry file="LogicTests_checkIfCalculatorCanProperlySplitEquationIntoParts - 2019.03.11 at 22h 50m 44s.xml">
+      <configuration name="LogicTests.checkIfCalculatorCanProperlySplitEquationIntoParts" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_checkIfa0ButtonPuts0InEquationField - 2019.03.05 at 21h 10m 05s.xml">
-      <configuration name="AppTest.checkIfa0ButtonPuts0InEquationField" configurationId="JUnit" />
+    <history-entry file="LogicTests_checkIfCalculatorCanProperlySplitEquationIntoParts - 2019.03.11 at 22h 51m 08s.xml">
+      <configuration name="LogicTests.checkIfCalculatorCanProperlySplitEquationIntoParts" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_checkIfa0ButtonPuts0InEquationField - 2019.03.05 at 21h 13m 26s.xml">
-      <configuration name="AppTest.checkIfa0ButtonPuts0InEquationField" configurationId="JUnit" />
+    <history-entry file="LogicTests_checkIfCalculatorCanProperlySplitEquationIntoParts - 2019.03.11 at 22h 51m 36s.xml">
+      <configuration name="LogicTests.checkIfCalculatorCanProperlySplitEquationIntoParts" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest - 2019.03.05 at 21h 13m 56s.xml">
-      <configuration name="AppTest" configurationId="JUnit" />
+    <history-entry file="LogicTests_checkIfCalculatorCanProperlySplitEquationIntoParts - 2019.03.11 at 22h 52m 11s.xml">
+      <configuration name="LogicTests.checkIfCalculatorCanProperlySplitEquationIntoParts" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest - 2019.03.05 at 21h 19m 10s.xml">
-      <configuration name="AppTest" configurationId="JUnit" />
+    <history-entry file="LogicTests_checkIfCalculatorCanProperlySplitEquationIntoParts - 2019.03.11 at 22h 52m 17s.xml">
+      <configuration name="LogicTests.checkIfCalculatorCanProperlySplitEquationIntoParts" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GUITests - 2019.03.05 at 21h 34m 47s.xml">
-      <configuration name="GUITests" configurationId="JUnit" />
+    <history-entry file="LogicTests_checkIfCalculatorCanProperlySplitEquationIntoParts - 2019.03.11 at 22h 52m 57s.xml">
+      <configuration name="LogicTests.checkIfCalculatorCanProperlySplitEquationIntoParts" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GUITests - 2019.03.05 at 21h 35m 48s.xml">
-      <configuration name="GUITests" configurationId="JUnit" />
+    <history-entry file="LogicTests_checkIfCalculatorCanProperlySplitEquationIntoParts - 2019.03.11 at 22h 53m 23s.xml">
+      <configuration name="LogicTests.checkIfCalculatorCanProperlySplitEquationIntoParts" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19426000" />
+    <option name="totallyTimeSpent" value="37999000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2153518" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13113007" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -868,7 +907,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36767897" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21908894" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.22993493" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -886,7 +925,7 @@
       <window_info anchor="right" id="Database" order="5" weight="0.32995737" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" sideWeight="0.49817517" weight="0.1641791" />
+      <window_info anchor="right" id="Maven Projects" order="8" sideWeight="0.49817517" visible="true" weight="0.1641791" />
       <window_info anchor="right" id="Coverage" order="9" sideWeight="0.5018248" side_tool="true" visible="true" weight="0.1641791" />
     </layout>
     <layout-to-restore>
@@ -925,6 +964,24 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/classes/CalculatorModel.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/classes/CalculatorModel.java</url>
+          <line>16</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1015,13 +1072,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_181/src.zip!/java/lang/Override.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
@@ -1044,48 +1094,42 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3876" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/classes/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/CalculatorInterface.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/CalculatorInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="89" column="19" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3932#3933#0" expanded="true" />
-            <element signature="e#3999#4000#0" expanded="true" />
-            <element signature="e#3792#3793#0" expanded="true" />
-            <element signature="e#3833#3834#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/classes/GUITests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1479">
-          <caret line="87" column="57" lean-forward="true" selection-start-line="87" selection-start-column="57" selection-end-line="87" selection-end-column="57" />
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/classes/LogicTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/CalculatorInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1094,23 +1138,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/classes/CalculatorController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+        <state relative-caret-position="34">
+          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/classes/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1056#1057#0" expanded="true" />
-            <element signature="e#1109#1110#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/CalculatorInterface.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/classes/CalculatorModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="83">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
           <folding>
-            <element signature="e#228#229#0" expanded="true" />
-            <element signature="e#254#255#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
