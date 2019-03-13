@@ -42,16 +42,4 @@ public class LogicTests{
         assertThat(calculatorModel.calculate(equation)).isEqualTo("4");
     }
 
-    @Test
-    public void checkIfCalculatorCanProperlySplitEquationIntoParts(){
-        CalculatorModel calculatorModel = new CalculatorModel();
-        String equation = "3 + 2 - 1";
-        List<Character> equationList = calculatorModel.putEveryPartOfEquationIntoList(equation);
-
-        assertThat(equationList.get(0)).isEqualTo('3');
-        assertThat(equationList.get(1)).isEqualTo('+');
-        assertThat(equationList.get(2)).isEqualTo('2');
-        assertThat(equationList.get(3)).isEqualTo('-');
-        assertThat(equationList.get(4)).isEqualTo('1');
-    }
 }
