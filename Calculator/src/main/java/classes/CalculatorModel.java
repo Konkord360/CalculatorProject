@@ -14,21 +14,14 @@ public class CalculatorModel {
     }
 
     String calculate(String equation) {
-        List<Character> everyPartOfEquation = putEveryPartOfEquationIntoList(equation);
-        //TODO parse expresion to ONP and calulate its value
+        String onpEquation = ONPConverter.convertEquationToONP(equation);
+
+        //List<Character> everyPartOfEquation = putEveryPartOfEquationIntoList(equation);
         //this.equation = equation;
         //this.result = "";
         return result;
     }
 
-    List<Character> putEveryPartOfEquationIntoList(String equation) {
-        List<Character> equationList = new ArrayList<>();
-
-        for (char character : equation.replaceAll("\\s+", "").toCharArray())
-            equationList.add(character);
-
-        return equationList;
-    }
 
     public String getResult() {
         return this.result;
