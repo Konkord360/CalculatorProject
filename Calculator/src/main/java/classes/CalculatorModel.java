@@ -1,10 +1,9 @@
 package classes;
 
+import mathematicalOperations.*;
+
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class CalculatorModel {
     String result;
@@ -15,31 +14,56 @@ public class CalculatorModel {
 
     String calculate(String equation) {
         String onpEquation = ONPConverter.convertEquationToONP(equation);
+        Stack calculationStack = new Stack();
 
-        //List<Character> everyPartOfEquation = putEveryPartOfEquationIntoList(equation);
-        //this.equation = equation;
-        //this.result = "";
-        return result;
+        while (!onpEquation.equals("")) {
+            do {
+                if (onpEquation.contains(" ")) {
+                    calculationStack.push(onpEquation.substring(0, onpEquation.indexOf(" ")));
+                    onpEquation = onpEquation.substring(onpEquation.indexOf(" ") + 1);
+                } else {
+                    calculationStack.push(onpEquation);
+                    onpEquation = "";
+                }
+            } while (!isOperator(calculationStack.peek().toString()));
+            executeCurrentOperation(calculationStack);
+        }
+
+        return calculationStack.pop().toString();
     }
 
+    public boolean isOperator(String characterToBeRecognized) {
+        try {
+            BigDecimal conversionTest = new BigDecimal(characterToBeRecognized);
+            return false;
+        } catch (Exception e) {
+            return true;
+        }
+    }
+
+    public void executeCurrentOperation(Stack stack){
+        MathematicalOperation mathematicalOperation = getProperOperation(stack.pop().toString());
+        String b = stack.pop().toString();
+        String a = stack.pop().toString();
+        stack.push(mathematicalOperation.calculate(a ,b));
+    }
+
+    public MathematicalOperation getProperOperation(String operator){
+        if(operator.equals("+"))
+            return new AddOperation();
+        else if(operator.equals("-"))
+            return new SubrtactOperation();
+        else if(operator.equals("x"))
+            return new MultiplyOperation();
+        else if(operator.equals("/"))
+            return new DivideOperation();
+        else throw new IllegalArgumentException();
+    }
 
     public String getResult() {
         return this.result;
     }
-
-    public BigDecimal add(BigDecimal augend, BigDecimal addend) {
-        return augend.add(addend);
-    }
-
-    public BigDecimal subtract(BigDecimal minuend, BigDecimal subtrahend) {
-        return minuend.subtract(subtrahend);
-    }
-
-    public BigDecimal multiply(BigDecimal multiplicand, BigDecimal multiplier) {
-        return multiplicand.multiply(multiplier);
-    }
-
-    public BigDecimal divide(BigDecimal dividend, BigDecimal divisor) {
-        return dividend.divide(divisor);
-    }
+    //TODO zrobić interfejs mathematical operation
+    //  klasa na każdą operację matematyczną w zależności od znaku operacjo +-/x
+    //
 }

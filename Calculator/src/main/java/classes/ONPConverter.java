@@ -11,14 +11,14 @@ import java.util.regex.Pattern;
 public class ONPConverter {
     private String normalEqiation;
     private String onpEquation;
-
+//TODO poprawić bo brzydkie
     public ONPConverter() {
         normalEqiation = "";
         onpEquation = "";
     }
 
     static String convertEquationToONP(String equationToBeConverted) {
-        //List<String> convertedEquation = new ArrayList<>();
+        //List<String> convertedEquation = new ArrayList<>();//TODO dopracować algorytm.
         List<String> equationParts = putEveryPartOfEquationIntoList(equationToBeConverted);
         Stack stack = new Stack();
         StringBuilder out = new StringBuilder();
@@ -26,14 +26,14 @@ public class ONPConverter {
             switch (equationParts.get(i)) {
                 case "+":
                 case "-":
-                    while (!stack.empty() && (stack.peek().equals("*") || stack.peek().equals("/"))) {
+                    while (!stack.empty() && (stack.peek().equals("x") || stack.peek().equals("/"))) {
                         out.append(" ");
                         out.append(stack.pop());
                     }
                     out.append(" ");
                     stack.push(equationParts.get(i));
                     break;
-                case "*":
+                case "x":
                 case "/":
                     out.append(" ");
                     stack.push(equationParts.get(i));
@@ -71,14 +71,14 @@ public class ONPConverter {
         Pattern digitPattern = Pattern.compile("(\\d)|(,)");
         Matcher matcher;
 
-        for (char character : equation.replaceAll("\\s+", "").concat("x").toCharArray()) {
+        for (char character : equation.replaceAll("\\s+", "").concat("X").toCharArray()) {
             matcher = digitPattern.matcher(String.valueOf(character));
             if (matcher.matches())
                 number.append(String.valueOf(character));
             else {
                 equationList.add(String.valueOf(number));
                 number.setLength(0);
-                if (character != 'x')
+                if (character != 'X')
                     equationList.add(String.valueOf(character));
             }
         }

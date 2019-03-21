@@ -12,15 +12,19 @@ public class ONPConverterTests {
     public void checkIfONPConverterConvertsSimpleEquationsProperly() {
         SoftAssertions softAssertions = new SoftAssertions();
         softAssertions.assertThat(ONPConverter.convertEquationToONP("3 + 2")).isEqualTo("3 2 +");
-        softAssertions.assertThat(ONPConverter.convertEquationToONP("52+(1+2)*4-3")).isEqualTo("52 1 2 + 4 * 3 - +");
-        softAssertions.assertThat(ONPConverter.convertEquationToONP("52+((1+2)*4)-3")).isEqualTo("52 1 2 + 4 * 3 - +");
-        softAssertions.assertThat(ONPConverter.convertEquationToONP("(52+1+2)*4-3")).isEqualTo("52 1 2 + + 4 * 3 -");
+        softAssertions.assertThat(ONPConverter.convertEquationToONP("52+(1+2)x4-3")).isEqualTo("52 1 2 + 4 x 3 - +");
+        softAssertions.assertThat(ONPConverter.convertEquationToONP("52+((1+2)x4)-3")).isEqualTo("52 1 2 + 4 x 3 - +");
+        softAssertions.assertThat(ONPConverter.convertEquationToONP("(52+1+2)x4-3")).isEqualTo("52 1 2 + + 4 x 3 -");
         softAssertions.assertAll();
     }
 
     @Test
     public void checkIf() {
-        Character character;
+        assertThat(ONPConverter.convertEquationToONP("(1+5)x((2+(1+3))/(3+4))")).isEqualTo("1 5 + 2 1 3 + + 3 4 + / x");
+    }
+    @Test
+    public void checkIf2() {
+        assertThat(ONPConverter.convertEquationToONP("((2+7)/3+(14-3)*4)/2")).isEqualTo("2 7 + 3 / 14 3 - 4 * + 2 /");
     }
 
 
