@@ -1,45 +1,53 @@
 package classes;
 
-import com.sun.prism.shader.AlphaOne_ImagePattern_AlphaTest_Loader;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ONPConverter {
-    private String normalEqiation;
-    private String onpEquation;
-//TODO poprawić bo brzydkie
-    public ONPConverter() {
-        normalEqiation = "";
-        onpEquation = "";
-    }
+ class ONPConverter {
 
     static String convertEquationToONP(String equationToBeConverted) {
-        //List<String> convertedEquation = new ArrayList<>();//TODO dopracować algorytm.
         List<String> equationParts = putEveryPartOfEquationIntoList(equationToBeConverted);
-        Stack stack = new Stack();
+        Stack<String> stack = new Stack<>();
         StringBuilder out = new StringBuilder();
-        for (int i = 0; i < equationParts.size(); i++)
-            switch (equationParts.get(i)) {
+        for (String equationPart : equationParts)
+            switch (equationPart) {
                 case "+":
-                case "-":
-                    while (!stack.empty() && (stack.peek().equals("x") || stack.peek().equals("/"))) {
+                    while (!stack.empty() && (stack.peek().equals("x") || stack.peek().equals("/") || stack.peek().equals("-"))) {
                         out.append(" ");
                         out.append(stack.pop());
                     }
                     out.append(" ");
-                    stack.push(equationParts.get(i));
+                    stack.push(equationPart);
+                    break;
+                case "-":
+                    while (!stack.empty() && (stack.peek().equals("x") || stack.peek().equals("/") || stack.peek().equals("+"))) {
+                        out.append(" ");
+                        out.append(stack.pop());
+                    }
+                    out.append(" ");
+                    stack.push(equationPart);
                     break;
                 case "x":
-                case "/":
+                    while (!stack.empty() && stack.peek().equals("/")) {
+                        out.append(" ");
+                        out.append(stack.pop());
+                    }
                     out.append(" ");
-                    stack.push(equationParts.get(i));
+                    stack.push(equationPart);
+                    break;
+                case "/":
+                    while (!stack.empty() && stack.peek().equals("x")) {
+                        out.append(" ");
+                        out.append(stack.pop());
+                    }
+                    out.append(" ");
+                    stack.push(equationPart);
                     break;
                 case "(":
-                    stack.push(equationParts.get(i));
+                    stack.push(equationPart);
                     break;
                 case ")":
                     while (!stack.empty() && !stack.peek().equals("(")) {
@@ -49,7 +57,7 @@ public class ONPConverter {
                     stack.pop();
                     break;
                 default:
-                    out.append(equationParts.get(i));
+                    out.append(equationPart);
                     break;
             }
 
@@ -59,30 +67,24 @@ public class ONPConverter {
         return out.toString();
     }
 
-    public static String convertEquationFromONPToNormal(String onpEquation) {
-        String normalEquation = "";
-
-        return onpEquation;
-    }
-
     static List<String> putEveryPartOfEquationIntoList(String equation) {
         List<String> equationList = new ArrayList<>();
         StringBuilder number = new StringBuilder();
-        Pattern digitPattern = Pattern.compile("(\\d)|(,)");
+        Pattern digitPattern = Pattern.compile("(\\d)|(\\.)");
         Matcher matcher;
 
-        for (char character : equation.replaceAll("\\s+", "").concat("X").toCharArray()) {
+        for (char character : equation.replaceAll("\\s+", "").toCharArray()) {
             matcher = digitPattern.matcher(String.valueOf(character));
             if (matcher.matches())
                 number.append(String.valueOf(character));
-            else {
-                equationList.add(String.valueOf(number));
+            else{
+                if(number.length() != 0)
+                    equationList.add(String.valueOf(number));
                 number.setLength(0);
-                if (character != 'X')
-                    equationList.add(String.valueOf(character));
+                equationList.add(String.valueOf(character));
             }
         }
-
+        equationList.add(String.valueOf(number));
         return equationList;
     }
 }

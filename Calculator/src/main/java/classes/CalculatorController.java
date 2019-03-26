@@ -5,9 +5,9 @@ import GUI.CalculatorInterface;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class CalculatorController {
-    CalculatorInterface calculatorInterface;
-    CalculatorModel calculatorModel;
+class CalculatorController {
+    private CalculatorInterface calculatorInterface;
+    private CalculatorModel calculatorModel;
 
     CalculatorController(CalculatorInterface calculatorInterface, CalculatorModel calculatorModel) {
         this.calculatorInterface = calculatorInterface;
@@ -42,10 +42,7 @@ public class CalculatorController {
     class EqualButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            String result;
-            calculatorModel.calculate(calculatorInterface.getEquation());
-            result = calculatorModel.getResult();
-            calculatorInterface.setText(result);
+            calculatorInterface.setText(calculatorModel.calculate(calculatorInterface.getEquation()));
         }
     }
 }

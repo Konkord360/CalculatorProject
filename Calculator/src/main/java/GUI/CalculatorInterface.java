@@ -26,6 +26,8 @@ public class CalculatorInterface extends JFrame {
     private JButton comaButton;
     private JButton minusPlusButton;
     private JPanel rootPanel;
+    private JButton rBracket;
+    private JButton lBracket;
 
     public CalculatorInterface() {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -58,6 +60,8 @@ public class CalculatorInterface extends JFrame {
         minusPlusButton.setName("minusPlusButton");
         equationField.setName("equationField");
         rootPanel.setName("rootPanel");
+        lBracket.setName("lBracket");
+        rBracket.setName("rBracket");
     }
 
     public void addActionListenersForTextWritingButtons(ActionListener listenerForNumberPrinting) {
@@ -76,25 +80,27 @@ public class CalculatorInterface extends JFrame {
         subtractButton.addActionListener(listenerForNumberPrinting);
         addButton.addActionListener(listenerForNumberPrinting);
         comaButton.addActionListener(listenerForNumberPrinting);
+        lBracket.addActionListener(listenerForNumberPrinting);
+        rBracket.addActionListener(listenerForNumberPrinting);
     }
 
-    public void addClearButtonActionListener(ActionListener clearButtonListener){
+    public void addClearButtonActionListener(ActionListener clearButtonListener) {
         CButton.addActionListener(clearButtonListener);
     }
 
-    public void addBackButtonActionListener(ActionListener backButtonActionListener){
+    public void addBackButtonActionListener(ActionListener backButtonActionListener) {
         backButton.addActionListener(backButtonActionListener);
     }
 
-    public void addEqualButtonActionListener(ActionListener equalButtonListener){
+    public void addEqualButtonActionListener(ActionListener equalButtonListener) {
         equalButton.addActionListener(equalButtonListener);
     }
 
-    public String getEquation(){
+    public String getEquation() {
         return String.valueOf(this.equationField.getText());
     }
 
-    public void setText(String text){
+    public void setText(String text) {
         this.equationField.setText(text);
     }
 }

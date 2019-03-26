@@ -11,26 +11,21 @@ public class ONPConverterTests {
     @Test
     public void checkIfONPConverterConvertsSimpleEquationsProperly() {
         SoftAssertions softAssertions = new SoftAssertions();
+        softAssertions.assertThat(ONPConverter.convertEquationToONP("(52+1+2)x4-3.5")).isEqualTo("52 1 2 + + 4 x 3.5 -");
         softAssertions.assertThat(ONPConverter.convertEquationToONP("3 + 2")).isEqualTo("3 2 +");
-        softAssertions.assertThat(ONPConverter.convertEquationToONP("52+(1+2)x4-3")).isEqualTo("52 1 2 + 4 x 3 - +");
-        softAssertions.assertThat(ONPConverter.convertEquationToONP("52+((1+2)x4)-3")).isEqualTo("52 1 2 + 4 x 3 - +");
+        softAssertions.assertThat(ONPConverter.convertEquationToONP("52+(1+2)x4-3")).isEqualTo("52 1 2 + 4 x + 3 -");
+        softAssertions.assertThat(ONPConverter.convertEquationToONP("52+((1+2)x4)-3")).isEqualTo("52 1 2 + 4 x + 3 -");
         softAssertions.assertThat(ONPConverter.convertEquationToONP("(52+1+2)x4-3")).isEqualTo("52 1 2 + + 4 x 3 -");
         softAssertions.assertAll();
     }
 
     @Test
-    public void checkIf() {
-        assertThat(ONPConverter.convertEquationToONP("(1+5)x((2+(1+3))/(3+4))")).isEqualTo("1 5 + 2 1 3 + + 3 4 + / x");
+    public void checkIfONPConverterConvertsComplicatedEquation() {
+        assertThat(ONPConverter.convertEquationToONP("(3 + 2) x (3 + 1) / 2 - 4 / 2 + (3 + 4 x (2 + 3))")).isEqualTo("3 2 + 3 1 + x 2 / 4 2 / - 3 4 2 3 + x + +");
     }
-    @Test
-    public void checkIf2() {
-        assertThat(ONPConverter.convertEquationToONP("((2+7)/3+(14-3)*4)/2")).isEqualTo("2 7 + 3 / 14 3 - 4 * + 2 /");
-    }
-
 
     @Test
     public void checkIfCalculatorCanProperlySplitEquationIntoParts() {
-        CalculatorModel calculatorModel = new CalculatorModel();
         String equation = "3 + 2 - 1";
         List<String> equationList = ONPConverter.putEveryPartOfEquationIntoList(equation);
 
