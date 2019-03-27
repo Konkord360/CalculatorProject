@@ -42,6 +42,7 @@ class CalculatorController {
     class EqualButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            calculatorInterface.setTextOnPreviousOperationField(calculatorInterface.getEquation());
             calculatorInterface.setText(calculatorModel.calculate(calculatorInterface.getEquation()));
         }
     }

@@ -28,6 +28,7 @@ public class CalculatorInterface extends JFrame {
     private JPanel rootPanel;
     private JButton rBracket;
     private JButton lBracket;
+    private JTextField previousOperationField;
 
     public CalculatorInterface() {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -62,6 +63,7 @@ public class CalculatorInterface extends JFrame {
         rootPanel.setName("rootPanel");
         lBracket.setName("lBracket");
         rBracket.setName("rBracket");
+        previousOperationField.setName("previousOperationField");
     }
 
     public void addActionListenersForTextWritingButtons(ActionListener listenerForNumberPrinting) {
@@ -102,5 +104,9 @@ public class CalculatorInterface extends JFrame {
 
     public void setText(String text) {
         this.equationField.setText(text);
+    }
+
+    public void setTextOnPreviousOperationField(String text) {
+        this.previousOperationField.setText(text);
     }
 }
