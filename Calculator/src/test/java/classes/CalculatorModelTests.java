@@ -9,6 +9,27 @@ import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException
 
 public class CalculatorModelTests {
     @Test
+    public void checkIfCalculatorCanProperlyHandlesSinglePositiveCharacter() {
+        CalculatorModel calculatorModel = new CalculatorModel();
+        String equation = "3";
+        assertThat(calculatorModel.calculate(equation)).isEqualTo("3");
+    }
+
+    @Test
+    public void checkIfCalculatorCanProperlyHandlesSingleNegativeCharacter() {
+        CalculatorModel calculatorModel = new CalculatorModel();
+        String equation = "-3";
+        assertThat(calculatorModel.calculate(equation)).isEqualTo("-3");
+    }
+
+    @Test
+    public void checkIfCalculatorCanProperlyHandlesSingleNegtaiveCharacters() {
+        CalculatorModel calculatorModel = new CalculatorModel();
+        String equation = "3--3";
+        assertThat(calculatorModel.calculate(equation)).isEqualTo("-3");
+    }
+
+    @Test
     public void checkIfCalculatorCanProperlyCalculateSimpleAddition() {
         CalculatorModel calculatorModel = new CalculatorModel();
         String equation = "3 + 2";
@@ -47,6 +68,11 @@ public class CalculatorModelTests {
     public void checkIfCalculatorCanDetectOperatorCorrectly() {
         CalculatorModel calculatorModel = new CalculatorModel();
         assertThat(calculatorModel.isOperator("+")).isTrue();
+    }
+
+    @Test
+    public void checkIfCalculatorWontDetectNumberAsOperator() {
+        CalculatorModel calculatorModel = new CalculatorModel();
         assertThat(calculatorModel.isOperator("5")).isFalse();
     }
 
