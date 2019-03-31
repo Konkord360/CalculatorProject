@@ -57,5 +57,5 @@ class CalculatorModel {
             default:
                 throw new IllegalArgumentException();
         }
-    }//TODO zrobić klasę mathematicalOperationFactory i w niej robić rozpoznanie(przyda się do konwersji) dodać do operatorów operacje do konwersji na stacku
+    }
 }

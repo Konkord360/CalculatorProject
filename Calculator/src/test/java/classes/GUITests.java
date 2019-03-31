@@ -168,4 +168,11 @@ public class GUITests extends AssertJSwingJUnitTestCase {
         window.button("equalButton").click();
         window.textBox("equationField").requireText("31");
     }
+
+    @Test
+    public void checkIfEquationIsProperlyMovedToHistoryAfterHittingEqualButton(){
+        window.button("a3Button").click();
+        window.button("equalButton").click();
+        window.textBox("previousOperationField").requireText("3");
+    }
 }
