@@ -7,7 +7,7 @@
             <class name="classes.CalculatorModelTests"/>
             <class name="classes.ONPConverterTests"/>
             <class name="classes.MathematicalOperationsTests"/>
-            <class name="classes.GUITests"/>
+            <!--<class name="classes.GUITests"/>-->
         </classes>
     </test>
 </suite>

@@ -3,12 +3,15 @@ package classes;
 import mathematicalOperations.*;
 
 import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
 class CalculatorModel {
+    private Map<String, MathematicalOperation> mathematicalOperationMap = new HashMap<>();
 
     String calculate(String equation) {
-        String onpEquation = ONPConverter.convertEquationToONP(equation);
+        String onpEquation = ONPConverter.convertEquationToONP(equation).trim();
         Stack<String> calculationStack = new Stack<>();
 
         while (!onpEquation.equals("")) {
@@ -20,21 +23,17 @@ class CalculatorModel {
                     calculationStack.push(onpEquation);
                     onpEquation = "";
                 }
-            } while (!isOperator(calculationStack.peek()) && onpEquation.length() != 0);
-            if (isOperator(calculationStack.peek()))
+            } while (!isRecognizedOperator(calculationStack.peek()) && onpEquation.length() != 0);
+            if (isRecognizedOperator(calculationStack.peek()))
                 executeCurrentOperation(calculationStack);
         }
 
         return new BigDecimal(calculationStack.pop()).stripTrailingZeros().toPlainString();
     }
 
-    boolean isOperator(String characterToBeRecognized) {
-        try {
-            BigDecimal conversionTest = new BigDecimal(characterToBeRecognized);
-            return false;
-        } catch (Exception e) {
-            return true;
-        }
+    boolean isRecognizedOperator(String characterToBeRecognized) {
+        return mathematicalOperationMap.get(characterToBeRecognized) != null;
+
     }
 
     private void executeCurrentOperation(Stack<String> stack) {
@@ -44,18 +43,24 @@ class CalculatorModel {
         stack.push(mathematicalOperation.calculate(a, b));
     }
 
+
+    void addMathemacticalOperation(String operationSign, MathematicalOperation mathematicalOperation) {
+        this.mathematicalOperationMap.put(operationSign, mathematicalOperation);
+    }
+
     MathematicalOperation getProperOperation(String operator) {
-        switch (operator) {
-            case "+":
-                return new AddOperation();
-            case "-":
-                return new SubrtactOperation();
-            case "x":
-                return new MultiplyOperation();
-            case "/":
-                return new DivideOperation();
-            default:
-                throw new IllegalArgumentException();
-        }
+        return this.mathematicalOperationMap.get(operator);
+//        switch (operator) {
+//            case "+":
+//                return new AddOperation();
+//            case "-":
+//                return new SubrtactOperation();
+//            case "x":
+//                return new MultiplyOperation();
+//            case "/":
+//                return new DivideOperation();
+//            default:
+//                throw new IllegalArgumentException();
+//        }
     }
 }
