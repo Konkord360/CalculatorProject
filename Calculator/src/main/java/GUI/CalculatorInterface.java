@@ -3,6 +3,9 @@ package GUI;
 import javax.swing.*;
 import java.awt.event.ActionListener;
 
+/**
+ * GUI for the calculator in SWING
+ */
 public class CalculatorInterface extends JFrame {
     private JTextField equationField;
     private JButton CEButton;
@@ -30,6 +33,9 @@ public class CalculatorInterface extends JFrame {
     private JButton lBracket;
     private JTextField previousOperationField;
 
+    /**
+     * Sets basic parameters of the GUI
+     */
     public CalculatorInterface() {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setUpNamesForTests();
@@ -38,6 +44,9 @@ public class CalculatorInterface extends JFrame {
         setSize(400, 500);
     }
 
+    /**
+     * sets up button names. Required for tests.
+     */
     private void setUpNamesForTests() {
         CEButton.setName("CEButton");
         CButton.setName("CButton");
@@ -66,6 +75,10 @@ public class CalculatorInterface extends JFrame {
         previousOperationField.setName("previousOperationField");
     }
 
+    /**
+     * Adds listeners for Text writing buttons
+     * @param listenerForNumberPrinting listener which prints sign from the button to the equation field.
+     */
     public void addActionListenersForTextWritingButtons(ActionListener listenerForNumberPrinting) {
         a9Button.addActionListener(listenerForNumberPrinting);
         a8Button.addActionListener(listenerForNumberPrinting);
@@ -86,26 +99,51 @@ public class CalculatorInterface extends JFrame {
         rBracket.addActionListener(listenerForNumberPrinting);
     }
 
+    /**
+     *
+     * @param clearButtonListener listener for button which clears the equation field
+     */
     public void addClearButtonActionListener(ActionListener clearButtonListener) {
         CButton.addActionListener(clearButtonListener);
     }
 
+    /**
+     *
+     * @param backButtonActionListener listener for button which deletes last written sign
+     */
     public void addBackButtonActionListener(ActionListener backButtonActionListener) {
         backButton.addActionListener(backButtonActionListener);
     }
 
+    /**
+     *
+     * @param equalButtonListener listener for button which indicates that equation
+     *                           from text field should be calculated
+     */
     public void addEqualButtonActionListener(ActionListener equalButtonListener) {
         equalButton.addActionListener(equalButtonListener);
     }
 
+    /**
+     *
+     * @return equation from text field
+     */
     public String getEquation() {
         return String.valueOf(this.equationField.getText());
     }
 
+    /**
+     *
+     * @param text to be printed on the text field
+     */
     public void setText(String text) {
         this.equationField.setText(text);
     }
 
+    /**
+     *
+     * @param text to be written in the history field
+     */
     public void setTextOnPreviousOperationField(String text) {
         this.previousOperationField.setText(text);
     }

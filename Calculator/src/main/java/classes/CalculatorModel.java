@@ -5,8 +5,15 @@ import mathematicalOperations.*;
 import java.math.BigDecimal;
 import java.util.Stack;
 
+/**
+ * Executes Mathematical operations
+ */
 class CalculatorModel {
-
+    /**
+     * Calculates given equation
+     * @param equation  Mathematical equation in normal format
+     * @return Equation result
+     */
     String calculate(String equation) {
         String onpEquation = ONPConverter.convertEquationToONP(equation);
         Stack<String> calculationStack = new Stack<>();
@@ -28,6 +35,11 @@ class CalculatorModel {
         return new BigDecimal(calculationStack.pop()).stripTrailingZeros().toPlainString();
     }
 
+    /**
+     * Checks if given character is a defined mathematical operator
+     * @param characterToBeRecognized  single character.
+     * @return true or false
+     */
     boolean isOperator(String characterToBeRecognized) {
         try {
             BigDecimal conversionTest = new BigDecimal(characterToBeRecognized);
@@ -37,6 +49,10 @@ class CalculatorModel {
         }
     }
 
+    /**
+     * Takes smallest possible operation off stack and executes it
+     * @param stack buffer holding currently analyzed part of the equation
+     */
     private void executeCurrentOperation(Stack<String> stack) {
         MathematicalOperation mathematicalOperation = getProperOperation(stack.pop());
         String b = stack.pop();
@@ -49,7 +65,7 @@ class CalculatorModel {
             case "+":
                 return new AddOperation();
             case "-":
-                return new SubrtactOperation();
+                return new SubtractOperation();
             case "x":
                 return new MultiplyOperation();
             case "/":

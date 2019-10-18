@@ -7,7 +7,11 @@ import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
 
+/**
+ * Tests for calculating functionality
+ */
 public class CalculatorModelTests {
+
     @Test
     public void checkIfCalculatorCanProperlyHandlesSinglePositiveCharacter() {
         CalculatorModel calculatorModel = new CalculatorModel();
@@ -80,7 +84,7 @@ public class CalculatorModelTests {
     public void checkIfCalculatorProperlyDetectsOperations() {
         CalculatorModel calculatorModel = new CalculatorModel();
         assertThat(calculatorModel.getProperOperation("+")).isInstanceOf(AddOperation.class);
-        assertThat(calculatorModel.getProperOperation("-")).isInstanceOf(SubrtactOperation.class);
+        assertThat(calculatorModel.getProperOperation("-")).isInstanceOf(SubtractOperation.class);
         assertThat(calculatorModel.getProperOperation("x")).isInstanceOf(MultiplyOperation.class);
         assertThat(calculatorModel.getProperOperation("/")).isInstanceOf(DivideOperation.class);
     }

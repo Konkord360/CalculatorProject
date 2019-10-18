@@ -7,6 +7,9 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Unit tests for ONP converter
+ */
 public class ONPConverterTests {
     @Test
     public void checkIfONPConverterConvertsSimpleEquationsProperly() {
