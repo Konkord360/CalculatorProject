@@ -5,7 +5,7 @@ import GUI.CalculatorInterface;
 import mathematicalOperations.AddOperation;
 import mathematicalOperations.DivideOperation;
 import mathematicalOperations.MultiplyOperation;
-import mathematicalOperations.SubrtactOperation;
+import mathematicalOperations.SubtractOperation;
 
 import javax.swing.*;
 
@@ -17,7 +17,7 @@ import javax.swing.*;
  */
 public class App extends CalculatorInterface {
     /**
-     * Displays interface and creates instances of MVC
+     * Displays interface, creates instances of MVC and adds possible operations to the model
      * @param args - not supported
      */
     public static void main(String[] args) {
@@ -26,7 +26,7 @@ public class App extends CalculatorInterface {
             CalculatorInterface calculatorInterface = new CalculatorInterface();
             CalculatorModel calculatorModel = new CalculatorModel();
             calculatorModel.addMathemacticalOperation("+", new AddOperation());
-            calculatorModel.addMathemacticalOperation("-", new SubrtactOperation());
+            calculatorModel.addMathemacticalOperation("-", new SubtractOperation());
             calculatorModel.addMathemacticalOperation("x", new MultiplyOperation());
             calculatorModel.addMathemacticalOperation("/", new DivideOperation());
             CalculatorController calculatorController = new CalculatorController(calculatorInterface, calculatorModel);
