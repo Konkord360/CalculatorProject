@@ -16,7 +16,7 @@ public class CalculatorModelTests {
     public  void setUpCalculatorModelWithMathematicalOpeartions(){
         this.calculatorModel = new CalculatorModel();
         this.calculatorModel.addMathemacticalOperation("+", new AddOperation());
-        this.calculatorModel.addMathemacticalOperation("-", new SubrtactOperation());
+        this.calculatorModel.addMathemacticalOperation("-", new SubtractOperation());
         this.calculatorModel.addMathemacticalOperation("x", new MultiplyOperation());
         this.calculatorModel.addMathemacticalOperation("/", new DivideOperation());
     }
@@ -83,7 +83,7 @@ public class CalculatorModelTests {
     @Test
     public void checkIfCalculatorProperlyDetectsOperations() {
         assertThat(this.calculatorModel.getProperOperation("+")).isInstanceOf(AddOperation.class);
-        assertThat(this.calculatorModel.getProperOperation("-")).isInstanceOf(SubrtactOperation.class);
+        assertThat(this.calculatorModel.getProperOperation("-")).isInstanceOf(SubtractOperation.class);
         assertThat(this.calculatorModel.getProperOperation("x")).isInstanceOf(MultiplyOperation.class);
         assertThat(this.calculatorModel.getProperOperation("/")).isInstanceOf(DivideOperation.class);
     }
