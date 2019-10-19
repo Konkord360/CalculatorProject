@@ -7,7 +7,7 @@ import org.assertj.swing.junit.testcase.AssertJSwingJUnitTestCase;
 import org.junit.Test;
 
 /**
- * Unit test for simple App.
+ * GUI tests
  */
 public class GUITests extends AssertJSwingJUnitTestCase {
     private FrameFixture window;

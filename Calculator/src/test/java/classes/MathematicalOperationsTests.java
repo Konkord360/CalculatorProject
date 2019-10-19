@@ -5,6 +5,9 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Tests for mathematical operation
+ */
 public class MathematicalOperationsTests {
 
     @Test
@@ -15,7 +18,7 @@ public class MathematicalOperationsTests {
 
     @Test
     public void checkIfCalculatorCanProperlySubtractTwoNumbers() {
-        MathematicalOperation mathematicalOperation = new SubrtactOperation();
+        MathematicalOperation mathematicalOperation = new SubtractOperation();
         assertThat(mathematicalOperation.calculate("10", "5")).isEqualTo("5");
     }
 

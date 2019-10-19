@@ -7,7 +7,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
+/**
+ * Executes Mathematical operations
+ */
 class CalculatorModel {
+    /**
+     * Calculates given equation
+     * @param equation  Mathematical equation in normal format
+     * @return Equation result
+     */
     private Map<String, MathematicalOperation> mathematicalOperationMap = new HashMap<>();
 
     String calculate(String equation) {
@@ -31,11 +39,27 @@ class CalculatorModel {
         return new BigDecimal(calculationStack.pop()).stripTrailingZeros().toPlainString();
     }
 
+    /**
+     * Checks if given character is a defined mathematical operator
+     * @param characterToBeRecognized  single character.
+     * @return true or false
+     */
+    boolean isOperator(String characterToBeRecognized) {
+        try {
+            BigDecimal conversionTest = new BigDecimal(characterToBeRecognized);
+            return false;
+        } catch (Exception e) {
+            return true;
+        }
     boolean isRecognizedOperator(String characterToBeRecognized) {
         return mathematicalOperationMap.get(characterToBeRecognized) != null;
 
     }
 
+    /**
+     * Takes smallest possible operation off stack and executes it
+     * @param stack buffer holding currently analyzed part of the equation
+     */
     private void executeCurrentOperation(Stack<String> stack) {
         MathematicalOperation mathematicalOperation = getProperOperation(stack.pop());
         String b = stack.pop();

@@ -6,8 +6,15 @@ import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * converts for handling ONP conversion
+ */
  class ONPConverter {
-
+     /**
+      * Converts given equation from normal format to ONP
+      * @param equationToBeConverted mathematical equation
+      * @return mathematical equation in ONP format
+      */
     static String convertEquationToONP(String equationToBeConverted) {
         List<String> equationParts = putEveryPartOfEquationIntoList(equationToBeConverted);
         Stack<String> stack = new Stack<>();
@@ -67,6 +74,11 @@ import java.util.regex.Pattern;
         return out.toString();
     }
 
+     /**
+      * Separates every sign from equation to a list
+      * @param equation  mathematical equation
+      * @return Mathematical equation separated sign by sign
+      */
     static List<String> putEveryPartOfEquationIntoList(String equation) {
         List<String> equationList = new ArrayList<>();
         StringBuilder number = new StringBuilder();

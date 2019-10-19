@@ -6,6 +6,9 @@ import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Tests for calculating functionality
+ */
 public class CalculatorModelTests {
     private CalculatorModel calculatorModel;
 
