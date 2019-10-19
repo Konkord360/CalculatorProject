@@ -11,13 +11,14 @@ import java.util.Stack;
  * Executes Mathematical operations
  */
 class CalculatorModel {
+    private Map<String, MathematicalOperation> mathematicalOperationMap = new HashMap<>();
+
     /**
      * Calculates given equation
+     *
      * @param equation  Mathematical equation in normal format
      * @return Equation result
      */
-    private Map<String, MathematicalOperation> mathematicalOperationMap = new HashMap<>();
-
     String calculate(String equation) {
         String onpEquation = ONPConverter.convertEquationToONP(equation).trim();
         Stack<String> calculationStack = new Stack<>();
@@ -41,19 +42,13 @@ class CalculatorModel {
 
     /**
      * Checks if given character is a defined mathematical operator
-     * @param characterToBeRecognized  single character.
+     *
+     * @param characterToBeRecognized single character.
      * @return true or false
      */
-    boolean isOperator(String characterToBeRecognized) {
-        try {
-            BigDecimal conversionTest = new BigDecimal(characterToBeRecognized);
-            return false;
-        } catch (Exception e) {
-            return true;
-        }
+
     boolean isRecognizedOperator(String characterToBeRecognized) {
         return mathematicalOperationMap.get(characterToBeRecognized) != null;
-
     }
 
     /**
@@ -67,11 +62,20 @@ class CalculatorModel {
         stack.push(mathematicalOperation.calculate(a, b));
     }
 
-
+    /**
+     * Adds given mathematical operation to map, which stores all defined classes
+     * @param operationSign mathematical operation sign to be added to recognizable characters
+     * @param mathematicalOperation Class which handles given operation
+     */
     void addMathemacticalOperation(String operationSign, MathematicalOperation mathematicalOperation) {
         this.mathematicalOperationMap.put(operationSign, mathematicalOperation);
     }
 
+    /**
+     * returns class from map to handle given operation
+     * @param operator mathematical operation sign (+/-*)
+     * @return instance of class which handles given operations
+     */
     MathematicalOperation getProperOperation(String operator) {
         return this.mathematicalOperationMap.get(operator);
     }
