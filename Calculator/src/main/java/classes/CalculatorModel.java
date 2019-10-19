@@ -50,17 +50,5 @@ class CalculatorModel {
 
     MathematicalOperation getProperOperation(String operator) {
         return this.mathematicalOperationMap.get(operator);
-//        switch (operator) {
-//            case "+":
-//                return new AddOperation();
-//            case "-":
-//                return new SubrtactOperation();
-//            case "x":
-//                return new MultiplyOperation();
-//            case "/":
-//                return new DivideOperation();
-//            default:
-//                throw new IllegalArgumentException();
-//        }
     }
 }
